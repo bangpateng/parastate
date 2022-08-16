@@ -109,4 +109,4 @@ Contoh Output Yang Akan Keluar
 
 `safestakeoperator-dvf_root_node-1  | Base64 ENR: enr:-IS4QAMOt4-VHqkEdA1YRDI1VCltXeb92Y9HiCatfHDCtIH5Z2yKcYB1e3NUqs8xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxyuDUmstAHYpMa2_oxVtw0RW_QAdpzBQA8yWM0xOIN1ZHCCIy0`
 
-**MASIH BERLANJUT NEXT STEP (DEPLOY OPERATOR) :** Waiting Soonn
+**MASIH BERLANJUT NEXT STEP (DEPLOY OPERATOR) :** https://github.com/bangpateng/parastate/blob/main/deploy-operator.md
