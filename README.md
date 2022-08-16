@@ -7,7 +7,7 @@
   <img height="150" height="auto" src="https://user-images.githubusercontent.com/38981255/184852284-08b36261-236b-4027-bdc3-487858eb09c7.png">
 </p>
 
-# SAFESTAKE TESTNET (ParaState)
+# SAFESTAKE TESTNET INCENTIVIZED (ParaState)
 ## Get Started
 
 In our eco-system, validators are delegating their tasks to operators and there is no need for deployment of validators. Therefore, we will discuss below two relevant deployment sections, one for *SafeStake Service Provider*, and one for *Operator*. Please only read the corresponding section for your deployment.
