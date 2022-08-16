@@ -105,5 +105,8 @@ sudo docker compose -f docker-compose-boot.yml up -d
 ```
 docker-compose -f docker-compose-boot.yml logs -f dvf_root_node | grep enr
 ```
+Contoh Output Yang Akan Keluar
 
-**MASIH BERLANJUT NEXT STEP (DEPLOY OPERATOR) : ** Waiting Soonn
+`safestakeoperator-dvf_root_node-1  | Base64 ENR: enr:-IS4QAMOt4-VHqkEdA1YRDI1VCltXeb92Y9HiCatfHDCtIH5Z2yKcYB1e3NUqs8xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxyuDUmstAHYpMa2_oxVtw0RW_QAdpzBQA8yWM0xOIN1ZHCCIy0`
+
+**MASIH BERLANJUT NEXT STEP (DEPLOY OPERATOR) :** Waiting Soonn
