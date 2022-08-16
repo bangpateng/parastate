@@ -69,10 +69,16 @@ sudo docker compose -f docker-compose-operator.yml logs -f operator | grep "node
 ```
 ## Back up your operator private key file
 
+<p align="center">
+  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/184949319-d29b3fa8-d47b-48b8-b79a-f16955381de2.png">
+</p>
+
 Berada di Path Back up your operator private key file
 ```
 /data/operator/ropsten/node_key.json
 ```
+Kalau Kalian Menggunakan Mobaxterms, Tinggal Cari Aja di Search Paste Perintah di atas
+
 ## Daftar Menjadi Operator
 
 - Pastikan Kalian Sudah Memiliki Akun Metamask
