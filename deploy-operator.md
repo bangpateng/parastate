@@ -9,6 +9,37 @@
 
 # SAFESTAKE TESTNET INCENTIVIZED (ParaState)
 
+## Get Started
+
+In our eco-system, validators are delegating their tasks to operators and there is no need for deployment of validators. Therefore, we will discuss below two relevant deployment sections, one for *SafeStake Service Provider*, and one for *Operator*. Please only read the corresponding section for your deployment.
+
+### Depoly SafeStake Service Provider
+
+SafeStake service provider contains several components:
+
+- A web server and frontend
+
+- A nodejs backend (for necessary communication with operators)
+
+- A root node service (for peer discovery in a p2p network)
+
+#### Root Node Service
+
+The duty agreement (using Hotstuff) among operators requires that these operators know IP of each other in a p2p network. Therefore, SafeSake provides a root node such that operators can consult and join the p2p network.
+
+#### Dependencies
+
+ * Public Static Network IP 
+ * Hardware(recommend)
+   * CPU: 4
+   * Memory: 8G
+   * Disk: 200GB
+ * OS
+   * Unix
+ * Software
+   * Docker
+   * Docker Compose 
+
 ## Update Sistem
 ```
 sudo apt-get update
