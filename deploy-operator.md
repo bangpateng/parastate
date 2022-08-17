@@ -9,75 +9,83 @@
 
 # SAFESTAKE TESTNET INCENTIVIZED (ParaState)
 
-<p align="center">
-  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/184885414-00bd81fe-accd-4e1d-b6f1-829fd686db69.PNG">
-</p>
-
-## Buat direktori volume lokal
+## Update Sistem
 ```
-cd
+sudo apt-get update
+sudo apt install git sudo unzip wget -y
+```
+## Add All Port
+```
+sudo ufw allow 25000:25003/tcp
+sudo ufw allow 9000/tcp
+sudo ufw allow 8545:8547/tcp
+sudo ufw allow 25004/udp
+sudo ufw allow 22/tcp
+sudo ufw allow 3000:3001/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 30303/tcp
+sudo ufw allow 9000/udp
+sudo ufw enable
+```
+## Instal Docker Engine
+```
+sudo apt-get install ca-certificates curl gnupg lsb-release -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+```
+## Install Docker Compose
+```
+mkdir -p ~/.docker/cli-plugins/
+curl -SL https://github.com/docker/compose/releases/download/v2.6.1/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+chmod +x ~/.docker/cli-plugins/docker-compose
+sudo chown $USER /var/run/docker.sock
+```
+## Create local volume directory
+```
 sudo mkdir -p /data/geth
 sudo mkdir -p /data/lighthouse
 sudo mkdir -p /data/jwt
 sudo mkdir -p /data/operator
 ```
-<p align="center">
-  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/184885407-213046c0-e4f2-4c9e-94a0-c02b7522f3a5.PNG">
-</p>
-
-## Hasilkan rahasia jwt Anda ke direktori jwt
+## Generate your jwt secret to jwt dirctory
 ```
 openssl rand -hex 32 | tr -d "\n" | sudo tee /data/jwt/jwtsecret
 ```
-Salin Code Sampai Sebelum root (Simpan Aja)
-
-<p align="center">
-  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/184886842-72547c3c-57a1-474b-a5e9-4e64d8b3d4d5.PNG">
-</p>
-
-## Isi dan Ganti enr yang ada dengan enr yang anda dapatkan di Step Sebelumnya
+## Clone operator code from github
 ```
-cd SafeStakeOperator
+git clone --recurse-submodules https://github.com/ParaState/SafeStakeOperator.git dvf
+```
+## konfigurasikan Ini memiliki nilai default dalam kode sumber terbaru
+```
+cd dvf
 vim .env
 ```
+Simpan Ketik ESC Ketik :wq dan ENTER
 
-Tekan `i` lalu arahkan ke ujung tulisan dan hapus sampai sebelum `ENR=enr:` paste enr yg sebelumnya sudah kalian backup lalu SAVE Tekan `ESC` lalu masukkan perintah `:wq` lalu `ENTER`
-
-## Build Docker
+## Build operator image (Tunggu Selesai Kurang dari 1 Jam)
 ```
 sudo docker compose -f docker-compose-operator.yml build
 ```
-<p align="center">
-  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/184919944-b14d78af-6877-4307-8467-6f98bd16e68f.png">
-</p>
-
-Tunggu dan Biarkan Instalisasi Selesai Sekitar 1 Jam Lebih (Tergantung Kecepatan Sinyal Internet Kalian)
-
-<p align="center">
-  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/184919961-5725fb53-3895-4b79-a1f8-38b812af5dea.PNG">
-</p>
-
+## Run Your Operator
 ```
 sudo docker compose -f docker-compose-operator.yml up -d
 ```
-<p align="center">
-  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/184919957-8aa2c16e-273d-4e43-822f-9927ebeccb85.png">
-</p>
-
+## Get your operator public key
 ```
 sudo docker compose -f docker-compose-operator.yml logs -f operator | grep "node public key"
 ```
+Simpan Balasan Out Pun Yang Keluar (Akan Terpakai)
+
 ## Back up your operator private key file
 
-<p align="center">
-  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/184949319-d29b3fa8-d47b-48b8-b79a-f16955381de2.png">
-</p>
-
-Berada di Path Back up your operator private key file
+Berada di Path
 ```
-/data/operator/ropsten/node_key.json
+cd /data/operator/ropsten/
+nano node_key.json
 ```
-Kalau Kalian Menggunakan Mobaxterms, Tinggal Cari Aja di Search Paste Perintah di atas
+Simpan dan Backup di Tempat Aman
 
 ## Daftar Menjadi Operator
 
