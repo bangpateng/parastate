@@ -9,6 +9,10 @@
 
 # SAFESTAKE TESTNET INCENTIVIZED (ParaState)
 
-## Get Started
+## Create Operator
 
-**Tutorial Sudah di Perbaharui, Cara Create Opeartor di : https://github.com/bangpateng/parastate/blob/main/deploy-operator.md**
+https://github.com/bangpateng/parastate/blob/main/deploy-operator.md**
+
+## Create Validator
+
+https://github.com/bangpateng/parastate/blob/main/create-validator.md
