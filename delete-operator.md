@@ -4,7 +4,7 @@
   <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185351608-c9c4ca14-6d0a-4bb5-85ca-bf3cc2bb8654.PNG">
 </p>
 
-- Cari Transaksi Add Operator Kalian
+- Cari Transaksi Add Operator Kalian di https://ropsten.etherscan.io/
 - Klik Tx Hash Transaksinya
 
 <p align="center">
