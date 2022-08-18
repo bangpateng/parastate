@@ -11,7 +11,7 @@
 
 ## Create Operator
 
-https://github.com/bangpateng/parastate/blob/main/deploy-operator.md**
+https://github.com/bangpateng/parastate/blob/main/deploy-operator.md
 
 ## Create Validator
 
