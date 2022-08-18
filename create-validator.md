@@ -9,21 +9,21 @@
 
 # CREATE VALIDATOR PASTIKAN IKUTI STEP DI BAWAH INI
 
-## Installing Prerequisites
+## 1. Installing Prerequisites
 ```
 sudo apt -y update
 sudo apt -y upgrade
 ```
-## Instal prasyarat yang umum tersedia.
+## 2. Instal prasyarat yang umum tersedia.
 ```
 sudo apt -y install software-properties-common wget curl ccze
 ```
-## Instal Geth
+## 3. Instal Geth
 ```
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt -y install geth
 ```
-## Installing Lighthouse
+## 4. Installing Lighthouse
 ```
 cd ~
 wget https://github.com/sigp/lighthouse/releases/download/v2.4.0/lighthouse-v2.4.0-x86_64-unknown-linux-gnu.tar.gz
@@ -34,7 +34,7 @@ rm lighthouse-v2.4.0-x86_64-unknown-linux-gnu.tar.gz
 sudo cp ~/lighthouse /usr/local/bin
 rm ~/lighthouse
 ```
-## Membuat file token JWT
+## 5. Membuat file token JWT
 
 Buat file token JWT di lokasi netral dan buat agar dapat dibaca oleh semua orang. Kami akan menggunakan /var/lib/ethereum/jwttokenlokasi untuk menyimpan file token JWT.
 ```
@@ -42,7 +42,7 @@ sudo mkdir -p /var/lib/ethereum
 openssl rand -hex 32 | tr -d "\n" | sudo tee /var/lib/ethereum/jwttoken
 sudo chmod +r /var/lib/ethereum/jwttoken
 ```
-## Mengonfigurasi simpul Geth Anda
+## 6. Mengonfigurasi simpul Geth Anda
 
 Buat pengguna khusus untuk menjalankan Geth, buat direktori untuk menyimpan data dan tetapkan izin yang sesuai.
 ```
@@ -91,7 +91,7 @@ sudo systemctl status geth.service
 ```
 sudo systemctl enable geth.service
 ```
-## Check Log Geth
+## 7. Check Log Geth
 
 <p align="center">
   <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185364946-1ca61044-b07b-48d6-8dbd-50d1bb43400b.PNG">
@@ -102,7 +102,7 @@ sudo journalctl -f -u geth.service -o cat | ccze -A
 ```
 Tekan Ctrl+ Cuntuk berhenti menampilkan pesan-pesan itu.
 
-## Configuring your Lighthouse beacon node
+## 8. Configuring your Lighthouse beacon node
 
 Buat pengguna khusus untuk menjalankan node suar Lighthouse, buat direktori untuk menyimpan data, salin file testnet, dan tetapkan izin yang sesuai.
 ```
@@ -149,7 +149,7 @@ sudo systemctl status lighthousebeacon.service
 ```
 sudo systemctl enable lighthousebeacon.service
 ```
-## Check Log lighthouse
+## 9. Check Log lighthouse
 
 <p align="center">
   <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185366596-244dccb0-e361-451a-a11d-888985348c35.PNG">
@@ -160,13 +160,13 @@ sudo journalctl -f -u lighthousebeacon.service -o cat | ccze -A
 ```
 Tekan Ctrl+ Cuntuk berhenti menampilkan pesan-pesan itu.
 
-## Claim Faucet Ropsten
+## 10. Claim Faucet Ropsten
 
 - Buka Link : https://faucet.egorfine.com/
 - Paste Address Metamask Kalian
 - Claim (Pastikan ada Sekitar 32 Lebih ETH Ropsten
 
-## Membuat kunci validator Anda dan melakukan deposit
+## 11. Membuat kunci validator Anda dan melakukan deposit
 
 <p align="center">
   <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185337095-5d6d592d-f0d0-4207-9aa0-1599773c1b75.PNG">
@@ -207,7 +207,7 @@ Tekan Ctrl+ Cuntuk berhenti menampilkan pesan-pesan itu.
 
 - Selesai, Nah Kita Akan Mendapatkan 2 File Json Deposit dan Keystore
 
-## Next Step
+## 12. Next Step
 
 <p align="center">
   <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185341280-95789248-0c08-4175-84ea-6f7779ea36ee.PNG">
@@ -252,7 +252,7 @@ Tekan Ctrl+ Cuntuk berhenti menampilkan pesan-pesan itu.
 - Approve Dan Confirmasi
 - Maka Otomatis 32 ETH Yang ada di Wallet Kalian Tersedot
 
-## Taruh 2 File Json Deposit dan Keystore kalian di Dalam Terminal Vps
+## 13. Taruh 2 File Json Deposit dan Keystore kalian di Dalam Terminal Vps
 
 <p align="center">
   <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185343695-b4176fa0-b765-4b5d-9006-bb0a4623760f.PNG">
@@ -268,7 +268,7 @@ mkdir keystores
 - Lalu `nano namafile` paste isian dalemnya lalu Simpan `CTRL X + Y + ENTER`
 - Masukan Keduanya Dengan nama File Yg Sama
 
-## Mengonfigurasi klien validator Lighthouse Anda
+## 14. Mengonfigurasi klien validator Lighthouse Anda
 
 ```
 sudo useradd --no-create-home --shell /bin/false lighthousevalidator
@@ -322,7 +322,7 @@ ExecStart=/usr/local/bin/lighthouse vc \
 [Install]
 WantedBy=multi-user.target
 ```
-## Mulai Systemd
+## 15. Mulai Systemd
 
 ```
 sudo systemctl daemon-reload
@@ -334,13 +334,13 @@ sudo systemctl status lighthousevalidator.service
 sudo systemctl enable lighthousevalidator.service
 ```
 
-## Check Log
+## 16. Check Log
 
 ```
 sudo journalctl -f -u lighthousevalidator.service -o cat | ccze -A
 ```
 
-## Submit Validator Ke Situs Testnet
+## 17. Submit Validator Ke Situs Testnet
 
 <p align="center">
   <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185347632-f313adce-39fe-41ae-b972-08c6de288f80.PNG">
