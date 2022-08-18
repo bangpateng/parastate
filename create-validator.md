@@ -173,8 +173,9 @@ Tekan Ctrl+ Cuntuk berhenti menampilkan pesan-pesan itu.
 - Buka Aplikasi Yang Sudah Kalian Instal dan Klik Create New Paste dan Simpan Pharse
 
 <p align="center">
-  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185338967-1960a00e-a53c-4158-b19c-37c96c42cdfe.PNG">
+  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185363624-fe9bee4e-a00c-475a-9871-141efe25547e.PNG">
 </p>
+
 
 - Buat Password (Wajib di Ingat Akan Berguna Untuk Login Login)
 
