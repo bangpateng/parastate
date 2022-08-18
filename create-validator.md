@@ -307,7 +307,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-User=lighthousevalidator
+User=root
 Group=lighthousevalidator
 Type=simple
 Restart=always
