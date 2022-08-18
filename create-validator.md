@@ -92,6 +92,11 @@ sudo systemctl status geth.service
 sudo systemctl enable geth.service
 ```
 ## Check Log Geth
+
+<p align="center">
+  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185364946-1ca61044-b07b-48d6-8dbd-50d1bb43400b.PNG">
+</p>
+
 ```
 sudo journalctl -f -u geth.service -o cat | ccze -A
 ```
@@ -145,6 +150,11 @@ sudo systemctl status lighthousebeacon.service
 sudo systemctl enable lighthousebeacon.service
 ```
 ## Check Log lighthouse
+
+<p align="center">
+  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185366596-244dccb0-e361-451a-a11d-888985348c35.PNG">
+</p>
+
 ```
 sudo journalctl -f -u lighthousebeacon.service -o cat | ccze -A
 ```
@@ -230,6 +240,16 @@ Tekan Ctrl+ Cuntuk berhenti menampilkan pesan-pesan itu.
 
 - Masukan Deposit Key Json kalian ke Upload Deposit Data, Drag and Drop
 - Continue dan Verifikasi Approve Transaksi Metamask
+
+<p align="center">
+  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185367414-9fd10a01-461f-450a-854a-d8e393aa7217.PNG">
+</p>
+
+<p align="center">
+  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185367403-316d8173-c2c3-4630-b158-e5a97f04bf59.PNG">
+</p>
+
+- Approve Dan Confirmasi
 - Maka Otomatis 32 ETH Yang ada di Wallet Kalian Tersedot
 
 ## Taruh 2 File Json Deposit dan Keystore kalian di Dalam Terminal Vps
