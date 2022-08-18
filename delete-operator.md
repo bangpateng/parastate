@@ -21,7 +21,7 @@
 
 - Buka Link : https://ropsten.etherscan.io/address/0xEE56aB0FfAD43e003a1c0517E6583D036A1A56b2#writeContract
 - Pilih Wtite > Connect Wallet
-- Pilih 3 Add Operator
+- Pilih 3 Delete Operator
 - Paste Public Key (Yang Sebelumnya kalian Salin)
 - Klik Write dan Approve Transaksi Metamask
 - Done
