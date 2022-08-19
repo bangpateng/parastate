@@ -357,3 +357,21 @@ sudo journalctl -f -u lighthousevalidator.service -o cat | ccze -A
 - Kalian Harus Memilih 4 Validator, Jangan ParaStateDAO4 Harus Operator Orang Lain
 - Kalian Bisa Add Operator ane Namanya `BangPateng`
 - Lalu Kalian Bisa Lanjutkan dan Transaksi Approve Via Metamask
+
+## Tunggu Hinga Validator Kalian Aktif 24 Jam Paling lama
+
+<p align="center">
+  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185538838-88b669b9-cd0f-4f87-a414-43e3a5eda668.PNG">
+</p>
+
+- Check Validator di Explorer : https://ropsten.beaconcha.in/
+- Paste Public Key Validator kalian
+
+# Check di Website SafeStakenya
+
+<p align="center">
+  <img height="auto" height="auto" src="https://user-images.githubusercontent.com/38981255/185538834-f2260f84-448d-413a-b1bc-bd278baa9caf.PNG">
+</p>
+
+- Paste Publick Key kalian di : https://explorer-testnet.safestake.xyz/
+- Jika Sudah Aktif Done (Jika Belum Tunggu Saja)
