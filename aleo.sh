@@ -28,7 +28,10 @@ sudo apt install git
 echo -e "\e[1m\e[32m2. Installing Rupstup... \e[0m" && sleep 1
 # packages
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+echo -e "\e[1m\e[32m3. Add Variable... \e[0m" && sleep 1
 source $HOME/.cargo/env
+source $HOME/.cargo/bin
 
 echo -e "\e[1m\e[32m3. Clone Repository... \e[0m" && sleep 1
 # download binary
