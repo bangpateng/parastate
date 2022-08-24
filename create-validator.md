@@ -386,13 +386,18 @@ rm -rf /bin/false lighthousebeacon
 rm -rf /var/lib/lighthouse
 rm -rf /bin/false lighthousevalidator
 rm -rf /var/lib/lighthouse/validators
-
+```
+```
 sudo systemctl stop geth.service
 sudo systemctl disable geth.service
 sudo rm /etc/systemd/system/geth.service* -rf
+```
+```
 sudo systemctl stop lighthousebeacon.service
 sudo systemctl disable lighthousebeacon.service
 sudo rm lighthousebeacon.service* -rf
+```
+```
 sudo systemctl stop lighthousevalidator.service
 sudo systemctl disable lighthousevalidator.service
 sudo rm lighthousevalidator.service* -rf
